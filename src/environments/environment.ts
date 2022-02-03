@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  URL_GAMEOFTHRONE: 'https://thronesapi.com',
+  URL_HARRYPOTTER: 'https://hp-api.herokuapp.com'
 };
 
 /*

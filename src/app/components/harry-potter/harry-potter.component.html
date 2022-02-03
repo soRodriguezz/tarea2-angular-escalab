@@ -1,0 +1,31 @@
+
+
+<div class="text-center">
+    <button class="btn btn-outline-dark m-1" (click)="getDatosHarryPotter('Gryffindor')">
+        Gryffindor
+    </button>
+    
+    <button class="btn btn-outline-dark m-1" (click)="getDatosHarryPotter('Slytherin')">
+        Slytherin
+    </button>
+    
+    <button class="btn btn-outline-dark m-1" (click)="getDatosHarryPotter('Hufflepuff')">
+        Hufflepuff
+    </button>
+    
+    <button class="btn btn-outline-dark m-1" (click)="getDatosHarryPotter('Ravenclaw')">
+        Ravenclaw
+    </button>
+</div>
+
+<div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
+    <div class="col" *ngFor="let dato of datos$ | async">
+      <div class="card">
+        <img *ngIf="dato.image" src="{{dato.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{dato.name}}</h5>
+          <p class="card-text">{{dato.gender}}</p>
+        </div>
+      </div>
+    </div>
+</div>

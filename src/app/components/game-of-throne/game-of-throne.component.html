@@ -1,0 +1,11 @@
+<div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
+    <div class="col" *ngFor="let dato of datos$ | async">
+      <div class="card">
+        <img src="{{ dato.imageUrl}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{dato.title}}</h5>
+          <p class="card-text">{{dato.fullName}}</p>
+        </div>
+      </div>
+    </div>
+</div>
